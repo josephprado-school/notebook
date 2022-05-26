@@ -1,0 +1,39 @@
+@media only screen and (max-width:800px) {
+    div#page-listing {
+        display: none;
+    }
+}
+
+#page-listing {
+    flex-grow: 2;
+    min-width: 156px;
+    max-width: 256px;
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--header-height);
+    background-color: var(--gray-light);
+    color: var(--blue-dark);
+}
+
+#list-of-pages {
+    padding: 0 20px;
+}
+
+#list-of-pages > ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#list-of-pages > ul > li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#new-page {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 8px;
+    margin: 0 8px;
+}

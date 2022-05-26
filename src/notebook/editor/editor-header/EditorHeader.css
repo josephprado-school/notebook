@@ -1,0 +1,30 @@
+#editor-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 8px;
+    height: var(--header-height);
+    background-color: var(--gray-light);
+}
+
+#page-title {
+    flex-grow: 2;
+    width: 256px;
+}
+
+#page-title > h1 {
+    margin: 0;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--blue-dark);
+}
+
+.editor-button {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 8px;
+    margin: 0 4px;
+}
