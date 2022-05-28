@@ -10,15 +10,16 @@
     max-width: 256px;
     display: flex;
     flex-direction: column;
-    padding-top: var(--header-height);
+    padding: var(--header-height) 20px 0;
     background-color: var(--gray-light);
     color: var(--blue-dark);
 }
 
-#create-new-page {
+#new-page {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 32px;
+    width: 96px;
     padding: 8px;
-    margin: 0 8px;
 }

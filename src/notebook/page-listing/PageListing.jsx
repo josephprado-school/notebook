@@ -16,7 +16,7 @@ export default function PageListing(props) {
 
     return (
         <div id="page-listing">
-            <button id="create-new-page" onClick={createNewPage}>Create New Page</button>
+            <button id="new-page" onClick={createNewPage}>New Page</button>
             <ListOfPages/>
         </div>
     )
