@@ -1,5 +1,5 @@
-li.highlight {
-    background-color: var(--blue-navy);
+.page-list-item > li.highlight {
+    background-color: var(--blue-navy) !important;
     color: var(--gray-light);
 }
 
@@ -7,4 +7,10 @@ li.highlight {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.page-list-item > li:hover {
+    cursor: pointer;
+    background-color: var(--blue-gray);
+    color: var(--gray-light);
 }
