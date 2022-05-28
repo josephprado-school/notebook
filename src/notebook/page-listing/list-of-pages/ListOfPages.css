@@ -1,0 +1,8 @@
+#list-of-pages {
+    padding: 0 20px;
+}
+
+#list-of-pages > ul {
+    padding-left: 0;
+    list-style: none;
+}

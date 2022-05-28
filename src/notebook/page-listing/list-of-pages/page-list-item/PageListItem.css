@@ -1,0 +1,10 @@
+li.highlight {
+    background-color: var(--blue-navy);
+    color: var(--gray-light);
+}
+
+.page-list-item > li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

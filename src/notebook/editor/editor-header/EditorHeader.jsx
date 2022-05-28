@@ -7,8 +7,8 @@ export default function EditorHeader(props) {
             <div id="page-title">
                 <h1>Page Title</h1>
             </div>
-            <button class="editor-button" id="edit-page">Edit Page</button>
-            <button class="editor-button" id="delete-page">Delete Page</button>
+            <button className="editor-button" id="edit-page">Edit Page</button>
+            <button className="editor-button" id="delete-page">Delete Page</button>
         </div>
     )
 }

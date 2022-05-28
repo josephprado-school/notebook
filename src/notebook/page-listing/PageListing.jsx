@@ -1,18 +1,23 @@
-import React from "react";
-import './PageListing.css'
+import React, { useContext } from "react";
+import { Pages } from "../contexts/Pages";
+import { CurrentPage } from "../contexts/CurrentPage";
+import ListOfPages from "./list-of-pages/ListOfPages";
+import './PageListing.css';
 
 export default function PageListing(props) {
+    const {pages, setPages} = useContext(Pages)
+    const {setCurrentPage} = useContext(CurrentPage)
+    const defaultPageName = 'Untitled'
+
+    const createNewPage = () => {
+        setPages([...pages, defaultPageName])
+        setCurrentPage(pages.length) // for some reason, the array length is short by 1 ???
+    }
+
     return (
         <div id="page-listing">
-            <div id="list-of-pages">
-                <button id="new-page">New Page</button>
-                <ul>
-                    <li>Name of Page 15f5d4f54df54s5f4ed54</li>
-                    <li>Name of Page 2</li>
-                    <li>Name of Page 3</li>
-                    <li>Untitled</li>
-                </ul>
-            </div>
+            <button id="create-new-page" onClick={createNewPage}>Create New Page</button>
+            <ListOfPages/>
         </div>
     )
 }
