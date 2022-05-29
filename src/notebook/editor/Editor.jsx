@@ -8,10 +8,16 @@ import './Editor.css';
 export default function Editor(props) {
     const {pages, setPages} = useContext(Pages)
     const {currentPage} = useContext(CurrentPage)
+
+    const pageExists = (pages.length > 0)
+    const content = pageExists ? pages[currentPage].content : ""
+
     const textConentChange = (newContent) => {
-        const newPages = [...pages]
-        newPages[currentPage].content = newContent
-        setPages(newPages)
+        if (pageExists) {
+            const newPages = [...pages]
+            newPages[currentPage].content = newContent
+            setPages(newPages)
+        }
     }
 
     return (
@@ -22,7 +28,7 @@ export default function Editor(props) {
                 <textarea 
                     name="text-content"
                     id="text-content"
-                    value={pages[currentPage].content}
+                    value={content}
                     onChange={e => textConentChange(e.target.value)}
                 ></textarea>
             </div>
