@@ -12,7 +12,12 @@ export default function EditorHeader(props) {
     }
 
     const deletePage = () => {
-        console.log('Delete Page Clicked')
+        const newPages = [...pages]
+        newPages.splice(currentPage, 1)
+        setPages(newPages)
+
+        if (currentPage > 0)
+            setCurrentPage(currentPage-1) // TODO: need fix -> app crashes when you delete the last page
     }
 
     return (
