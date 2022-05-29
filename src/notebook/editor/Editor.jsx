@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Pages } from "../contexts/Pages";
 import { CurrentPage } from "../contexts/CurrentPage";
-import EditorHeader from "./editor-header/EditorHeader";
+import Header from "./header/Header";
 import "./Editor.css";
 
 export default function Editor(props) {
@@ -21,7 +21,7 @@ export default function Editor(props) {
 
     return (
         <div id="editor">
-            <EditorHeader/>
+            <Header/>
             <div id="content-container">
                 <textarea 
                     name="text-content"

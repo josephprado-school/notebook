@@ -1,4 +1,4 @@
-.editor-button {
+.header-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,14 +8,14 @@
     margin: 0 4px;
 }
 
-.editor-button.green {
+.header-button.green {
     background-color: var(--green);
 }
 
-.editor-button.yellow {
+.header-button.yellow {
     background-color: var(--yellow);
 }
 
-.editor-button.red {
+.header-button.red {
     background-color: var(--red);
 }

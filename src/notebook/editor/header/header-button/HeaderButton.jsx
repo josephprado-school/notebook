@@ -1,10 +1,10 @@
 import React from "react";
-import "./EditorButton.css";
+import "./HeaderButton.css";
 
-export default function EditorButton(props) {
+export default function HeaderButton(props) {
     return (
         <button
-            className={`editor-button ${props.visibility} ${props.color}`}
+            className={`header-button ${props.visibility} ${props.color}`}
             onClick={props.action}
             disabled={props.disabled}
         >{props.name}</button>

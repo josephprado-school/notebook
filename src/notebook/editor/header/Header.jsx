@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Pages } from "../../contexts/Pages.js";
 import { CurrentPage } from "../../contexts/CurrentPage.js";
-import EditorButton from "./editor-button/EditorButton.jsx";
-import "./EditorHeader.css";
+import HeaderButton from "./header-button/HeaderButton.jsx";
+import "./Header.css";
 
-export default function EditorHeader(props) {
+export default function Header(props) {
     const {pages, setPages} = useContext(Pages)
     const {currentPage, setCurrentPage} = useContext(CurrentPage)
     
@@ -51,7 +51,7 @@ export default function EditorHeader(props) {
     useEffect(() => { if (deleteClicked) setDeleteClicked(false) }, [pages])
 
     return (
-        <div id="editor-header">
+        <div id="header">
             <div id="page-title">
                 <h1 className={visibleIf(!editingTitle)}>{title}</h1>
                 <input
@@ -63,14 +63,14 @@ export default function EditorHeader(props) {
                 />
             </div>
 
-            <EditorButton
+            <HeaderButton
                 visibility={visibleIf(!editingTitle)}
                 name='Edit Page'
                 action={() => setEditingTitle(true)}
                 disabled={!pageExists}
             />
 
-            <EditorButton
+            <HeaderButton
                 visibility={visibleIf(!editingTitle)}
                 name='Delete Page'
                 action={deletePage}
@@ -78,14 +78,14 @@ export default function EditorHeader(props) {
                 color={deleteClicked ? 'red' : null}
             />
 
-            <EditorButton
+            <HeaderButton
                 visibility={visibleIf(editingTitle)}
                 name='Confirm'
                 action={comfirm}
                 color='green'
             />
 
-            <EditorButton
+            <HeaderButton
                 visibility={visibleIf(editingTitle)}
                 name='Cancel'
                 action={cancel}
