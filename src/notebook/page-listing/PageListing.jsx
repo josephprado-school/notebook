@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Pages } from "../contexts/Pages";
 import { CurrentPage } from "../contexts/CurrentPage";
-import ListOfPages from "./list-of-pages/ListOfPages";
+import PageListItem from "./page-list-item/PageListItem";
 import './PageListing.css';
 
 export default function PageListing(props) {
@@ -23,7 +23,10 @@ export default function PageListing(props) {
     return (
         <div id="page-listing">
             <button id="new-page" onClick={createNewPage}>New Page</button>
-            <ListOfPages/>
+
+            <ul>
+                {pages.map( (page, i) => <PageListItem pageIndex={i} page={page}/>)}
+            </ul>
         </div>
     )
 }
