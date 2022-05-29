@@ -13,6 +13,5 @@
 
 .page-list-item > li:hover {
     cursor: pointer;
-    background-color: var(--blue-gray);
-    color: var(--gray-light);
+    background-color: var(--gray-dark);
 }
