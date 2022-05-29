@@ -8,7 +8,7 @@ export default function PageListing(props) {
     const {pages, setPages} = useContext(Pages)
     const {setCurrentPage} = useContext(CurrentPage)
     const defaultPageTitle = 'Untitled'
-    const defaultPageContent = "Default page content"
+    const defaultPageContent = ""
 
     const createNewPage = () => {
         setPages([...pages,
