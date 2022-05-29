@@ -4,7 +4,7 @@ import './PageListItem.css';
 
 export default function PageListItem(props) {
     const {currentPage, setCurrentPage} = useContext(CurrentPage)
-    const highlight = (props.pageNum === currentPage) ? 'highlight' : 'no-highlight';
+    const highlight = (props.pageIndex === currentPage) ? 'highlight' : 'no-highlight';
 
     return (
         <div className="page-list-item">
@@ -15,7 +15,7 @@ export default function PageListItem(props) {
                 development???
             */}
             <li key={props.pageNum} className={highlight}>
-                <div onClick={() => setCurrentPage(props.pageNum)}>{props.page}</div>
+                <div onClick={() => setCurrentPage(props.pageIndex)}>{props.page.title}</div>
             </li>
         </div>
     )

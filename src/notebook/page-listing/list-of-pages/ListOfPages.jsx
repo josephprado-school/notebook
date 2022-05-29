@@ -9,7 +9,7 @@ export default function ListOfPages(props) {
     return (
         <div id="list-of-pages">
             <ul>
-                {pages.map( (page, i) => <PageListItem pageNum={i} page={page}/>)}
+                {pages.map( (page, i) => <PageListItem pageIndex={i} page={page}/>)}
             </ul>
         </div>
     )
