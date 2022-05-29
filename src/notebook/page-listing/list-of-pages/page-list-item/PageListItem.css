@@ -3,7 +3,9 @@
     color: var(--gray-light);
 }
 
-.page-list-item > li {
+.page-list-item > li > div {
+    min-width: 116px;
+    max-width: 216px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
