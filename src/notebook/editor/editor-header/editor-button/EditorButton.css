@@ -1,0 +1,21 @@
+.editor-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    min-width: 96px;
+    padding: 8px;
+    margin: 0 4px;
+}
+
+.editor-button.green {
+    background-color: var(--green);
+}
+
+.editor-button.yellow {
+    background-color: var(--yellow);
+}
+
+.editor-button.red {
+    background-color: var(--red);
+}

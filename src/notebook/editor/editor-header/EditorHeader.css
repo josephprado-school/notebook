@@ -21,10 +21,6 @@
     color: var(--blue-dark);
 }
 
-.editor-button {
-    display: flex;
-    align-items: center;
-    height: 32px;
-    padding: 8px;
-    margin: 0 4px;
+#page-title > input {
+    font-size: 2em;
 }

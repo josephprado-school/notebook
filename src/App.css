@@ -1,9 +1,11 @@
 :root {
   --white:      #FEFEFE;
   --gray-light: #E7E9F0;
-  --blue-navy:  #051747;
   --blue-gray:  #535F80;
   --blue-dark:  #081F62;
+  --red:        #f44336;
+  --green:      #69ad68;
+  --yellow:     #e69d30;
   
   --header-height: 80px;
 }

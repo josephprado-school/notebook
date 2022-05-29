@@ -4,3 +4,7 @@ main {
     width: 100vw;
     background-color: var(--gray-light);
 }
+
+.hidden {
+    display: none;
+}
