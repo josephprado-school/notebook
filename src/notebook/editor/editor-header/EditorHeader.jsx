@@ -13,15 +13,21 @@ export default function EditorHeader(props) {
 
     const [newTitle, setNewTitle] = useState(title)
     const [editingTitle, setEditingTitle] = useState(false)
+    const [deleteClicked, setDeleteClicked] = useState(false)
 
     const visibleIf = active => active ? null : 'hidden'
 
     const deletePage = () => {
-        if (pageExists) {
+        if (!deleteClicked) {
+            setDeleteClicked(true)
+            alert('Are you sure? Click OK and then click "Delete Page" once more to proceed.')
+
+        } else {
             const newPages = [...pages]
             newPages.splice(currentPage, 1)
             setPages(newPages)
             setCurrentPage(Math.max(0, currentPage-1))
+            setDeleteClicked(false)
         }
     }
 
@@ -35,11 +41,14 @@ export default function EditorHeader(props) {
     const cancel = () => {
         setEditingTitle(false)
         setNewTitle(title)
+        setDeleteClicked(false)
     }
 
     // not sure why title needs to be in the array but excluding it was causing an error
     // "React Hook useEffect has a missing dependency: 'title'. Either include it or remove the dependency array"
     useEffect(cancel, [currentPage, title])
+
+    useEffect(() => { if (deleteClicked) setDeleteClicked(false) }, [pages])
 
     return (
         <div id="editor-header">
@@ -66,6 +75,7 @@ export default function EditorHeader(props) {
                 name='Delete Page'
                 action={deletePage}
                 disabled={!pageExists}
+                color={deleteClicked ? 'red' : null}
             />
 
             <EditorButton
