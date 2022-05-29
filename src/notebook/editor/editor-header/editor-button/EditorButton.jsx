@@ -1,5 +1,5 @@
 import React from "react";
-import './EditorButton.css';
+import "./EditorButton.css";
 
 export default function EditorButton(props) {
     return (

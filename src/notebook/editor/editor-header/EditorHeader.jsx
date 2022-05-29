@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Pages } from '../../contexts/Pages.js';
-import { CurrentPage } from '../../contexts/CurrentPage.js';
+import { Pages } from "../../contexts/Pages.js";
+import { CurrentPage } from "../../contexts/CurrentPage.js";
 import EditorButton from "./editor-button/EditorButton.jsx";
-import './EditorHeader.css';
+import "./EditorHeader.css";
 
 export default function EditorHeader(props) {
     const {pages, setPages} = useContext(Pages)

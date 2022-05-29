@@ -3,7 +3,7 @@ import { PagesProvider } from "./contexts/Pages";
 import { CurrentPageProvider } from "./contexts/CurrentPage";
 import PageListing from "./page-listing/PageListing";
 import Editor from "./editor/Editor";
-import './Notebook.css';
+import "./Notebook.css";
 
 export default function Notebook() {
     return (

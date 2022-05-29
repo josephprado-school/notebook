@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CurrentPage } from "../../contexts/CurrentPage";
-import './PageListItem.css';
+import "./PageListItem.css";
 
 export default function PageListItem(props) {
     const {currentPage, setCurrentPage} = useContext(CurrentPage)

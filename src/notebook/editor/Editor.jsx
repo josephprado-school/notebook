@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Pages } from "../contexts/Pages";
 import { CurrentPage } from "../contexts/CurrentPage";
-import EditorHeader from './editor-header/EditorHeader';
-import Toolbar from './toolbar/Toolbar';
-import './Editor.css';
+import EditorHeader from "./editor-header/EditorHeader";
+import Toolbar from "./toolbar/Toolbar";
+import "./Editor.css";
 
 export default function Editor(props) {
     const {pages, setPages} = useContext(Pages)

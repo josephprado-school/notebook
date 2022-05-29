@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Pages } from "../contexts/Pages";
 import { CurrentPage } from "../contexts/CurrentPage";
 import PageListItem from "./page-list-item/PageListItem";
-import './PageListing.css';
+import "./PageListing.css";
 
 export default function PageListing(props) {
     const {pages, setPages} = useContext(Pages)
