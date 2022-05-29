@@ -1,5 +1,5 @@
 .page-list-item > li.highlight {
-    background-color: var(--blue-navy) !important;
+    background-color: var(--blue-dark) !important;
     color: var(--gray-light);
 }
 
