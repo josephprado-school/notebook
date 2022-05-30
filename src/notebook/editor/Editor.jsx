@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState} from "react";
+import React, { useContext, useState} from "react";
 import { Pages } from "../contexts/Pages";
 import { CurrentPage } from "../contexts/CurrentPage";
 import { StorageManager } from "../contexts/StorageManager";
