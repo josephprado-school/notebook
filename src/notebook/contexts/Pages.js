@@ -14,7 +14,7 @@ export function PagesProvider(props) {
     }
     const emptyPage = { title: 'Untitled', content: '' }
 
-    const [pages, setPages] = useState([welcomePage])
+    const [pages, setPages] = useState([])
 
     return (
         <Pages.Provider value={{pages, setPages, welcomePage, emptyPage}}>
