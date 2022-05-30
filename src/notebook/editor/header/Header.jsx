@@ -44,10 +44,15 @@ export default function Header(props) {
         setDeleteClicked(false)
     }
 
-    // not sure why title needs to be in the array but excluding it was causing an error
-    // "React Hook useEffect has a missing dependency: 'title'. Either include it or remove the dependency array"
-    useEffect(cancel, [currentPage, title])
+    /*
+        not sure why the useEffects below throw warnings: "React Hook useEffect has a missing dependency..."
+        I disabled the warning per:
+        https://bobbyhadz.com/blog/react-hook-useeffect-has-missing-dependency
+    */
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(cancel, [currentPage])
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => { if (deleteClicked) setDeleteClicked(false) }, [pages])
 
     return (
