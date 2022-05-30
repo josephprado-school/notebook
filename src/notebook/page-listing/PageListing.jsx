@@ -5,18 +5,11 @@ import PageListItem from "./page-list-item/PageListItem";
 import "./PageListing.css";
 
 export default function PageListing(props) {
-    const {pages, setPages} = useContext(Pages)
+    const {pages, setPages, emptyPage} = useContext(Pages)
     const {setCurrentPage} = useContext(CurrentPage)
-    const defaultPageTitle = 'Untitled'
-    const defaultPageContent = ""
 
     const createNewPage = () => {
-        setPages([...pages,
-            {
-                title: defaultPageTitle,
-                content: defaultPageContent
-            }
-        ])
+        setPages([...pages, emptyPage])
         setCurrentPage(pages.length) // for some reason, the array length is short by 1 ???
     }
 
