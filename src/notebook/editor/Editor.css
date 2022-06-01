@@ -1,9 +1,3 @@
-@media only screen and (max-width:800px) {
-    div#editor {
-        padding: 0;
-    }
-}
-
 #editor {
     flex-grow: 1;
     min-width: 664px;

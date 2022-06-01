@@ -1,9 +1,3 @@
-@media only screen and (max-width:800px) {
-    div#page-listing {
-        display: none;
-    }
-}
-
 #page-listing {
     flex-grow: 2;
     min-width: 156px;
